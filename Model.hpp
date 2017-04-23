@@ -14,7 +14,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtx/transform.hpp>
 #include "shader.hpp"
-#include "Texture/texture.hpp"
+#include "Texture/texture.h"
 
 class Model{
     

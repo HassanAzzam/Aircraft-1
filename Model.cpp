@@ -72,7 +72,7 @@ void Model::Initialize(int Sx, int Sy, int Sz)
     
     
     
-    UVData.push_back(glm::vec2(0.0f,256.0f));
+    UVData.push_back(glm::vec2(0.0f,256.0f*2));
     UVData.push_back(glm::vec2(0.0f,256.0f));
     UVData.push_back(glm::vec2(0.0f,256.0f));
     UVData.push_back(glm::vec2(0.0f,256.0f));
