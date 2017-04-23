@@ -4,11 +4,15 @@
 #include <glm/gtx/transform.hpp>
 #include "shader.hpp"
 #include "Model.hpp"
-#include "Texture/texture.h"
-#include "Texture/Texture Loader/stb_image.h"
 #pragma once
 
-#define SKYBOX_TEX "Texture/skybox.jpg"
+#ifdef __APPLE__
+#define VTXSHADER "/Users/HassanAzzam/Desktop/graphics/graphics/SimpleVertexShader.vertexshader"
+#define FRGSHADER "/Users/HassanAzzam/Desktop/graphics/graphics/SimpleFragmentShader.fragmentshader"
+#else
+#define VTXSHADER "SimpleVertexShader.vertexshader"
+#define FRGSHADER "SimpleFragmentShader.fragmentshader"
+#endif
 
 class Renderer
 {

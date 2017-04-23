@@ -15,7 +15,7 @@ void Renderer::Initialize()
     glClearColor(0.0f, 0.0f, 0.4f, 1.0f);
     
     Skybox.TextureTarget = GL_TEXTURE_CUBE_MAP;
-    Skybox.Texture = new Texture(SKYBOX_TEX,1);
+    Skybox.ModelTexture = new Texture("Texture\\skybox.jpg",2);
     Skybox.Initialize(1,1,1);
     
     glm::mat4 Projection = glm::perspective(45.0f, 4.0f / 3.0f  , 0.1f, 100.0f);
@@ -27,8 +27,7 @@ void Renderer::Initialize()
                             
     ModelMatrix = Projection * Camera;
 
-	programID = LoadShaders( "/Users/HassanAzzam/Desktop/graphics/graphics/SimpleVertexShader.vertexshader",
-                            "/Users/HassanAzzam/Desktop/graphics/graphics/SimpleFragmentShader.fragmentshader" );
+	programID = LoadShaders(VTXSHADER, FRGSHADER);
 	MatrixID = glGetUniformLocation(programID, "ModelMatrix");
 	glUseProgram(programID);
 }

@@ -1,8 +1,7 @@
-#ifndef TEXTURE_H
-#define TEXTURE_H
 #pragma once
 #include <string>
 #include <GL/glew.h>
+#include "stb_image.h"
 
 class Texture
 {
@@ -22,5 +21,4 @@ private:
 	GLuint m_texture;
 };
 
-#endif
 //GLuint loadBMP_custom(const char * imagepath);

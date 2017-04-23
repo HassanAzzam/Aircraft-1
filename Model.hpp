@@ -14,8 +14,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtx/transform.hpp>
 #include "shader.hpp"
-#include "Texture/texture.h"
-#include "Texture/Texture Loader/stb_image.h"
+#include "Texture/texture.hpp"
 
 class Model{
     
@@ -33,7 +32,7 @@ public:
     
     std::vector<glm::vec2> UVData;
     GLenum TextureTarget;
-    Texture *Texture;
+    Texture *ModelTexture;
     void Initialize(int Sx, int Sy, int Sz);
     void Draw();
     void Cleanup();

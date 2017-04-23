@@ -123,7 +123,7 @@ void Model::Initialize(int Sx, int Sy, int Sz)
 
 void Model::Draw()
 {
-    Texture->Bind();
+    ModelTexture->Bind();
     glDrawArrays(GL_TRIANGLES,0,12*3);
     
 }
