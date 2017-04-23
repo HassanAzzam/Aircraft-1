@@ -16,42 +16,68 @@ void Model::Initialize(int Sx, int Sy, int Sz)
     glBindVertexArray(vertexArrayID);
     
     GLfloat verts[] = {
+        //Left
+        
+         1.0f,-1.0f, 1.0f,
+        -1.0f,-1.0f,-1.0f,
+         1.0f,-1.0f,-1.0f,
+        
+         1.0f,-1.0f, 1.0f,
         -1.0f,-1.0f,-1.0f,
         -1.0f,-1.0f, 1.0f,
+        
+        //Down
+        
+         1.0f,-1.0f, 1.0f,
+         1.0f, 1.0f,-1.0f,
+         1.0f,-1.0f,-1.0f,
+        
+         1.0f,-1.0f, 1.0f,
+         1.0f, 1.0f,-1.0f,
+         1.0f, 1.0f, 1.0f,
+        
+        //Right
+        
+         1.0f, 1.0f, 1.0f,
+        -1.0f, 1.0f,-1.0f,
+         1.0f, 1.0f,-1.0f,
+        
+         1.0f, 1.0f, 1.0f,
+        -1.0f, 1.0f,-1.0f,
         -1.0f, 1.0f, 1.0f,
-        1.0f, 1.0f,-1.0f,
+        
+        //Up
+        
+        -1.0f, 1.0f, 1.0f,
         -1.0f,-1.0f,-1.0f,
         -1.0f, 1.0f,-1.0f,
-        1.0f,-1.0f, 1.0f,
-        -1.0f,-1.0f,-1.0f,
-        1.0f,-1.0f,-1.0f,
-        1.0f, 1.0f,-1.0f,
-        1.0f,-1.0f,-1.0f,
-        -1.0f,-1.0f,-1.0f,
-        -1.0f,-1.0f,-1.0f,
+        
         -1.0f, 1.0f, 1.0f,
-        -1.0f, 1.0f,-1.0f,
-        1.0f,-1.0f, 1.0f,
+        -1.0f,-1.0f,-1.0f,
         -1.0f,-1.0f, 1.0f,
-        -1.0f,-1.0f,-1.0f,
-        -1.0f, 1.0f, 1.0f,
+        
+        //Top
+        
         -1.0f,-1.0f, 1.0f,
-        1.0f,-1.0f, 1.0f,
-        1.0f, 1.0f, 1.0f,
-        1.0f,-1.0f,-1.0f,
-        1.0f, 1.0f,-1.0f,
-        1.0f,-1.0f,-1.0f,
-        1.0f, 1.0f, 1.0f,
-        1.0f,-1.0f, 1.0f,
-        1.0f, 1.0f, 1.0f,
-        1.0f, 1.0f,-1.0f,
-        -1.0f, 1.0f,-1.0f,
-        1.0f, 1.0f, 1.0f,
-        -1.0f, 1.0f,-1.0f,
+         1.0f, 1.0f, 1.0f,
+         1.0f,-1.0f, 1.0f,
+        
+        -1.0f,-1.0f, 1.0f,
+         1.0f, 1.0f, 1.0f,
         -1.0f, 1.0f, 1.0f,
-        1.0f, 1.0f, 1.0f,
-        -1.0f, 1.0f, 1.0f,
-        1.0f,-1.0f, 1.0f
+        
+        //Bottom
+        
+        -1.0f,-1.0f,-1.0f,
+         1.0f, 1.0f,-1.0f,
+         1.0f,-1.0f,-1.0f,
+        
+        -1.0f,-1.0f,-1.0f,
+         1.0f, 1.0f,-1.0f,
+        -1.0f, 1.0f,-1.0f,
+        
+        
+        
     };
     for(int i=0; i<12*3*3; i++)
     {
@@ -70,56 +96,76 @@ void Model::Initialize(int Sx, int Sy, int Sz)
     glVertexAttribPointer(0,3,GL_FLOAT,GL_FALSE,0,0);
     
     
+    float quarter = 256.0f;
     
+    UVData.push_back(glm::vec2(quarter*1,quarter*1));
+    UVData.push_back(glm::vec2(quarter*0,quarter*2));
+    UVData.push_back(glm::vec2(quarter*1,quarter*2));
     
-    UVData.push_back(glm::vec2(0.0f,256.0f*2));
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-    UVData.push_back(glm::vec2(0.0f,256.0f));
+    UVData.push_back(glm::vec2(quarter*1,quarter*1));
+    UVData.push_back(glm::vec2(quarter*0,quarter*2));
+    UVData.push_back(glm::vec2(quarter*0,quarter*1));
+    
+    /////
+    
+    UVData.push_back(glm::vec2(quarter*1,quarter*1));
+    UVData.push_back(glm::vec2(quarter*2,quarter*2));
+    UVData.push_back(glm::vec2(quarter*1,quarter*2));
+    
+    UVData.push_back(glm::vec2(quarter*1,quarter*1));
+    UVData.push_back(glm::vec2(quarter*2,quarter*2));
+    UVData.push_back(glm::vec2(quarter*2,quarter*1));
+    
+    /////
+    
+    UVData.push_back(glm::vec2(quarter*2,quarter*1));
+    UVData.push_back(glm::vec2(quarter*3,quarter*2));
+    UVData.push_back(glm::vec2(quarter*2,quarter*2));
+    
+    UVData.push_back(glm::vec2(quarter*2,quarter*1));
+    UVData.push_back(glm::vec2(quarter*3,quarter*2));
+    UVData.push_back(glm::vec2(quarter*3,quarter*1));
+    
+    /////
+    
+    UVData.push_back(glm::vec2(quarter*3,quarter*1));
+    UVData.push_back(glm::vec2(quarter*4,quarter*2));
+    UVData.push_back(glm::vec2(quarter*3,quarter*2));
+    
+    UVData.push_back(glm::vec2(quarter*3,quarter*1));
+    UVData.push_back(glm::vec2(quarter*4,quarter*2));
+    UVData.push_back(glm::vec2(quarter*4,quarter*1));
+    
+    /////
+    
+    UVData.push_back(glm::vec2(quarter*1,quarter*0));
+    UVData.push_back(glm::vec2(quarter*2,quarter*1));
+    UVData.push_back(glm::vec2(quarter*1,quarter*1));
+    
+    UVData.push_back(glm::vec2(quarter*1,quarter*0));
+    UVData.push_back(glm::vec2(quarter*2,quarter*1));
+    UVData.push_back(glm::vec2(quarter*2,quarter*0));
+    
+    /////
+    
+    UVData.push_back(glm::vec2(quarter*1,quarter*2));
+    UVData.push_back(glm::vec2(quarter*2,quarter*3));
+    UVData.push_back(glm::vec2(quarter*1,quarter*3));
+    
+    UVData.push_back(glm::vec2(quarter*1,quarter*2));
+    UVData.push_back(glm::vec2(quarter*2,quarter*3));
+    UVData.push_back(glm::vec2(quarter*2,quarter*2));
+    
+    /////
 
-    
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-
-    
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-    UVData.push_back(glm::vec2(0.0f,256.0f));
-
-    
     
     glGenBuffers(1, &UVDataBufferID);
     glBindBuffer(GL_ARRAY_BUFFER, UVDataBufferID);
     glBufferData(GL_ARRAY_BUFFER, UVData.size() * sizeof(glm::vec2) , &UVData[0], GL_STATIC_DRAW);
+    
     glEnableVertexAttribArray(2);
-    }
+    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 0, (void*)0);
+}
 
 void Model::Draw()
 {

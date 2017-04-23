@@ -31,7 +31,6 @@ public:
     ~Model();
     
     std::vector<glm::vec2> UVData;
-    GLenum TextureTarget;
     Texture *ModelTexture;
     void Initialize(int Sx, int Sy, int Sz);
     void Draw();
