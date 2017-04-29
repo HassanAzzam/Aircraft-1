@@ -11,7 +11,7 @@ Essential Requirements
 5) [x] ~~Load basic models (a cube for the aircraft body and 2 cones for the wings) with appropriate material.~~
 6) [ ] Apply a third person camera.
 7) [ ] You must handle the keyboard keys in order to move the aircraft on the runway and make it takeoff and fly for a certain period and then return back to the runway smoothly.
-Bonuses
+- Bonuses
 1) [ ] Load other models for the airport building and other aircrafts in the runway and avoid collision between the main aircraft and these objects.
 2) [ ] Create at least one animation that starts and ends during flying (ex: make the aircraft swing).
 3) [ ] Multiple light sources in the runway.
