@@ -1,28 +1,24 @@
-﻿Build started 4/29/2017 4:07:37 AM.
-     1>Project "F:\FCIS\Project Template\Graphics L1\Graphics L1.vcxproj" on node 2 (Build target(s)).
+﻿Build started 4/29/2017 7:28:56 PM.
+     1>Project "F:\Projects\Aircraft\Graphics L1\Graphics L1.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"F:\FCIS\Project Template\Graphics L1\..\middleware\includes" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\tmp\\" /Fd"Debug\tmp\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "Application Manager\ApplicationManager.cpp" Renderer.cpp main.cpp
-         main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"F:\Projects\Aircraft\Graphics L1\..\middleware\includes" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\tmp\\" /Fd"Debug\tmp\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Renderer.cpp
          Renderer.cpp
      1>c:\program files (x86)\windows kits\8.1\include\shared\minwindef.h(130): warning C4005: 'APIENTRY' : macro redefinition
-                 f:\fcis\project template\middleware\includes\gl\glfw3.h(96) : see previous definition of 'APIENTRY'
-     1>f:\fcis\project template\graphics l1\renderer.cpp(171): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>f:\fcis\project template\graphics l1\renderer.cpp(177): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>f:\fcis\project template\graphics l1\renderer.cpp(183): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>f:\fcis\project template\graphics l1\renderer.cpp(189): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>f:\fcis\project template\graphics l1\renderer.cpp(193): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>f:\fcis\project template\graphics l1\renderer.cpp(197): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>f:\fcis\project template\graphics l1\renderer.cpp(201): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>f:\fcis\project template\graphics l1\renderer.cpp(205): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>f:\fcis\project template\graphics l1\renderer.cpp(209): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>f:\fcis\project template\graphics l1\renderer.cpp(213): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>f:\fcis\project template\graphics l1\renderer.cpp(226): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>f:\fcis\project template\graphics l1\renderer.cpp(227): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-         ApplicationManager.cpp
-     1>f:\fcis\project template\graphics l1\application manager\applicationmanager.cpp(117): warning C4805: '==' : unsafe mix of type 'int' and type 'bool' in operation
-         Generating Code...
+                 f:\projects\aircraft\middleware\includes\gl\glfw3.h(96) : see previous definition of 'APIENTRY'
+     1>f:\projects\aircraft\graphics l1\renderer.cpp(183): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\projects\aircraft\graphics l1\renderer.cpp(189): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\projects\aircraft\graphics l1\renderer.cpp(195): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\projects\aircraft\graphics l1\renderer.cpp(201): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\projects\aircraft\graphics l1\renderer.cpp(205): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\projects\aircraft\graphics l1\renderer.cpp(209): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\projects\aircraft\graphics l1\renderer.cpp(213): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\projects\aircraft\graphics l1\renderer.cpp(217): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\projects\aircraft\graphics l1\renderer.cpp(221): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\projects\aircraft\graphics l1\renderer.cpp(225): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\projects\aircraft\graphics l1\renderer.cpp(238): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>f:\projects\aircraft\graphics l1\renderer.cpp(239): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\FCIS\Project Template\Debug\Graphics L1.exe" /INCREMENTAL /NOLOGO /LIBPATH:"F:\FCIS\Project Template\Graphics L1\..\middleware\lib" dsound.lib dxguid.lib winmm.lib assimp.lib FreeImage.lib glew32.lib glfw3.lib opengl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\FCIS\Project Template\Debug\Graphics L1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\FCIS\Project Template\Debug\Graphics L1.lib" /MACHINE:X86 Debug\tmp\ApplicationManager.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\Projects\Aircraft\Debug\Graphics L1.exe" /INCREMENTAL /NOLOGO /LIBPATH:"F:\Projects\Aircraft\Graphics L1\..\middleware\lib" dsound.lib dxguid.lib winmm.lib assimp.lib FreeImage.lib glew32.lib glfw3.lib opengl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\Projects\Aircraft\Debug\Graphics L1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\Projects\Aircraft\Debug\Graphics L1.lib" /MACHINE:X86 Debug\tmp\ApplicationManager.obj
          Debug\tmp\FirstPersonCamera.obj
          Debug\tmp\md2LeagueOfLegend.obj
          Debug\tmp\Md3.obj
@@ -41,9 +37,9 @@
          Debug\tmp\texture.obj
          Debug\tmp\TexturedModel.obj
          Debug\tmp\vertexBufferObject.obj
-         Graphics L1.vcxproj -> F:\FCIS\Project Template\Debug\Graphics L1.exe
-     1>Done Building Project "F:\FCIS\Project Template\Graphics L1\Graphics L1.vcxproj" (Build target(s)).
+         Graphics L1.vcxproj -> F:\Projects\Aircraft\Debug\Graphics L1.exe
+     1>Done Building Project "F:\Projects\Aircraft\Graphics L1\Graphics L1.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:04.47
+Time Elapsed 00:00:02.02

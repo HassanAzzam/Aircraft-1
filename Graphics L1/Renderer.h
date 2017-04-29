@@ -17,7 +17,8 @@ class Renderer
 {
 	
 	GLuint programID;
-	ShaderProgram shader;
+	ShaderProgram shader;  //skybox
+	ShaderProgram shader1; //aircraft
 	//ShaderProgram shader;
 	//Model3D* model3D;
 	GLuint VPID;
