@@ -89,7 +89,7 @@ Renderer::~Renderer()
 		Images_names[5] = "front.png";
 		
 		t2 = new Texture("data/models/obj/Galaxy/body middle.tga", 1);
-		t = new Texture("arrakisday_dn.tga", 0);
+		t = new Texture("sand_light.tga", 1);
 		
 		//animated
 		/*animModel.LoadModel("data/models/md2/enemy/robot.md2");
