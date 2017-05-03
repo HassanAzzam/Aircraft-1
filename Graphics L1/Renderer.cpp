@@ -5,7 +5,7 @@
 
 #include "Renderer.h"
 #include "Application Manager\ApplicationManager.h"
-
+float xr = 3.02, yr = 3.02, zr = 3.02;   //intial points to move the aircraft
 Renderer::Renderer()
 {
 
@@ -18,6 +18,9 @@ Renderer::~Renderer()
 
 	void Renderer::Initialize()
 	{
+
+
+		
 		//since the triangle is not connected to anything else, so the normal is constant on all the vertices.
 		//drawing a square.
 		size_of_skybox = 10;
@@ -72,10 +75,11 @@ Renderer::~Renderer()
 		// Projection matrix : 
 		//shader.LoadProgram();
 	
-		// View matrix : 
+		// View matrix :
+		//myCamera->SetPerspectiveProjection(45.0f, 4.0f / 3.0f, 0.9f, 1000.0f);
 		myCamera->Reset(
-			+0.0f, +0.0f, 5.0f,// Camera Position
-			+0.0f, +0.0f, +0.0f,// Look at Point
+			+0.0f, 80.0f, 160.0f,// Camera Position
+			+0.0f, 80.0f, 0.0f,// Look at Point
 			+0.0f, +1.0f, +0.0f // Up Vector
 			);
 		//////////////////////////////////////////////////////////////////////////
@@ -91,36 +95,21 @@ Renderer::~Renderer()
 		t2 = new Texture("data/models/obj/Galaxy/body middle.tga", 1);
 		t = new Texture("sand_light.tga", 1);
 		
-		//animated
-		/*animModel.LoadModel("data/models/md2/enemy/robot.md2");
-
-		animState = animModel.StartAnimation(animType_t::RUN);
-		animatedModelShader.LoadProgram();
-		animModelMatrix = glm::translate(glm::vec3(0.0, 0.0, 0))*glm::rotate(-90.0f, glm::vec3(1, 0, 0))*glm::scale(glm::vec3(0.03f, 0.03f, 0.03f));*/
-	}
+	
+}
 
 void Renderer::Draw()
 {
 
 	glUseProgram(programID);
 
-	/*t->Bind();
-	glm::mat4 view = glm::mat4(glm::mat3(myCamera->GetViewMatrix()));
-	glm::mat4 VP = myCamera->GetProjectionMatrix() * myCamera->GetViewMatrix();
-	glUniformMatrix4fv(VPID, 1, GL_FALSE, &VP[0][0]);
-	mySquare->Draw();*/
-	//mat4 view1 = mat4(mat3(myCamera->GetViewMatrix()));
-	//glm::mat4 VP1 = myCamera->GetProjectionMatrix()*myCamera->GetViewMatrix();
-	//shader.BindVPMatrix(&VP1[0][0]);
-	
-
 	//Aircraft
 	shader1.UseProgram();
 	glm::mat4 VP1 = myCamera->GetProjectionMatrix() * myCamera->GetViewMatrix();
 	t2->Bind();
 	shader1.BindVPMatrix(&VP1[0][0]);
-	model3D->Render(&shader1,glm::rotate(0.0f,glm::vec3(0,1,0))*glm::scale(glm::vec3(3.02f, 3.02f, 3.02f))); // scaling the aircraft
-
+	model3D->Render(&shader1, glm::rotate(0.0f, glm::vec3(0, 1, 0))*glm::scale(glm::vec3(2.02f, 2.02f, 2.02f))*glm::translate(glm::vec3(xr, yr, zr))); // scaling the aircraft
+	
 	
 	// Skybox
 	shader.UseProgram();
@@ -159,77 +148,131 @@ void Renderer::Update(double deltaTime)
 	//animModel.UpdateVertices(&animState);
 }
 
-
-
 void Renderer::HandleKeyboardInput(int key, int action)
 {
+	
+	glm::vec3 pos = myCamera->GetEyePosition();
+	glm::mat4 VP1 = myCamera->GetProjectionMatrix() * myCamera->GetViewMatrix();
+	t2->Bind();
+	shader1.BindVPMatrix(&VP1[0][0]);
+
 	switch (key)
 	{
+		//Aircraft Movements	
+		case GLFW_KEY_W:
+		model3D->Render(&shader1, glm::rotate(0.0f, glm::vec3(0, 1, 0))*glm::scale(glm::vec3(2.02f, 2.02f, 2.02f))*glm::translate(glm::vec3(xr, yr, zr++))); 	 // movement directions 
+		break;																																				 	 // movement directions
+																																							 	 // movement directions
+		case GLFW_KEY_S:																																	 	 // movement directions
+		model3D->Render(&shader1, glm::rotate(0.0f, glm::vec3(0, 1, 0))*glm::scale(glm::vec3(2.02f, 2.02f, 2.02f))*glm::translate(glm::vec3(xr, yr, zr--))); 	 // movement directions
+		break;																																				 	 // movement directions
+																																							 	 // movement directions
+		case GLFW_KEY_D:																																	 	 // movement directions
+		model3D->Render(&shader1, glm::rotate(0.0f, glm::vec3(0, 1, 0))*glm::scale(glm::vec3(2.02f, 2.02f, 2.02f))*glm::translate(glm::vec3(xr++, yr, zr))); 	 // movement directions
+		break;																																				 	 // movement directions
+																																							 	 // movement directions
+		case GLFW_KEY_A:																																	 	 // movement directions
+		model3D->Render(&shader1, glm::rotate(0.0f, glm::vec3(0, 1, 0))*glm::scale(glm::vec3(2.02f, 2.02f, 2.02f))*glm::translate(glm::vec3(xr--, yr, zr))); 	 // movement directions
+		break;																																				 	 // movement directions
+																																							 	 // movement directions
+		case GLFW_KEY_X:																																	 	 // movement directions
+		model3D->Render(&shader1, glm::rotate(0.0f, glm::vec3(0, 1, 0))*glm::scale(glm::vec3(2.02f, 2.02f, 2.02f))*glm::translate(glm::vec3(xr, yr++, zr))); 	 // movement directions
+		break;																																				 	 // movement directions
+																																							 	 // movement directions
+		case GLFW_KEY_Z:
+		if (yr > -5.0)
+		{
+			model3D->Render(&shader1, glm::rotate(0.0f, glm::vec3(0, 1, 0))*glm::scale(glm::vec3(2.02f, 2.02f, 2.02f))*glm::translate(glm::vec3(xr, yr--, zr)));   // movement directions
+		}
+		break;
+
+		//Camera Movements
 		//Moving forward
-	case GLFW_KEY_UP:
-	case GLFW_KEY_W:
-		myCamera->Walk(1);
+		case GLFW_KEY_UP:
+			pos.z += -0.5;
+			if (pos.z > -100.0)
+			{
+				myCamera->Walk(0.5);
+			}
+			break;
+
+			//Moving backword
+		case GLFW_KEY_DOWN:
+			pos.z += 0.5;
+			if (pos.z > -100)
+			{
+				myCamera->Walk(-0.5);
+			}
+			break;
+
+		// Moving right  --Finished
+		case GLFW_KEY_RIGHT:
+		pos.x += 0.5;
+		if ((pos.x > -100))
+		{
+			myCamera->Strafe(0.5);
+		}
 		break;
 
-		//Moving backword
-	case GLFW_KEY_DOWN:
-	case GLFW_KEY_S:
-		myCamera->Walk(-1);
+		// Moving left  --Finished
+		case GLFW_KEY_LEFT:
+		pos.x += -1.0;
+		if (pos.x < 90)
+		{
+			myCamera->Strafe(-1.0);
+		}
 		break;
 
-		// Moving right
-	case GLFW_KEY_RIGHT:
-	case GLFW_KEY_D:
-		myCamera->Strafe(0.4);
+		// Moving up  --Finished
+		case GLFW_KEY_SPACE:
+		case GLFW_KEY_R:
+		pos.y += 0.5;
+		if ((pos.y > -100 && pos.y < 500))
+		{
+			myCamera->Fly(0.5);
+		}
 		break;
 
-		// Moving left
-	case GLFW_KEY_LEFT:
-	case GLFW_KEY_A:
-		myCamera->Strafe(-0.4);
+		// Moving down  --Finished
+		case GLFW_KEY_LEFT_CONTROL:
+		case GLFW_KEY_F:
+		pos.y += -0.5;
+		if (pos.y >= -2.0)
+		{
+			myCamera->Fly(-1.0);
+		}
 		break;
 
-		// Moving up
-	case GLFW_KEY_SPACE:
-	case GLFW_KEY_R:
-		myCamera->Fly(0.4);
-		break;
 
-		// Moving down
-	case GLFW_KEY_LEFT_CONTROL:
-	case GLFW_KEY_F:
-		myCamera->Fly(-0.4);
-		break;
+		case GLFW_KEY_I:
+			myCamera->Pitch(0.1);
+			break;
 
-	case GLFW_KEY_I:
-		myCamera->Pitch(0.1);
-		break;
+		case GLFW_KEY_K:
+			myCamera->Pitch(-0.1);
+			break;
 
-	case GLFW_KEY_K:
-		myCamera->Pitch(-0.1);
-		break;
+		case GLFW_KEY_L:
+			myCamera->Yaw(-0.1);
+			break;
 
-	case GLFW_KEY_L:
-		myCamera->Yaw(-0.1);
-		break;
+		case GLFW_KEY_J:
+			myCamera->Yaw(0.1);
+			break;
 
-	case GLFW_KEY_J:
-		myCamera->Yaw(0.1);
-		break;
+		case GLFW_KEY_O:
+			myCamera->Roll(-0.1);
+			break;
 
-	case GLFW_KEY_O:
-		myCamera->Roll(-0.1);
-		break;
+		case GLFW_KEY_U:
+			myCamera->Roll(0.1);
+			break;
 
-	case GLFW_KEY_U:
-		myCamera->Roll(0.1);
-		break;
+		default:
+			break;
+		}
 
-	default:
-		break;
-	}
-
-	myCamera->UpdateViewMatrix();
+		myCamera->UpdateViewMatrix();
 
 }
 
