@@ -1,0 +1,172 @@
+﻿Build started 5/3/2017 11:30:36 PM.
+     1>Project "F:\Projects\Aircraft\Graphics L1\Graphics L1.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"F:\Projects\Aircraft\x64\Debug\Graphics L1.exe" /INCREMENTAL /NOLOGO /LIBPATH:"F:\Projects\Aircraft\Graphics L1\..\middleware\lib" dsound.lib dxguid.lib winmm.lib assimp.lib FreeImage.lib glew32.lib glfw3.lib opengl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\Projects\Aircraft\x64\Debug\Graphics L1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\Projects\Aircraft\x64\Debug\Graphics L1.lib" /MACHINE:X64 x64\Debug\ApplicationManager.obj
+         x64\Debug\FirstPersonCamera.obj
+         x64\Debug\md2LeagueOfLegend.obj
+         x64\Debug\Md3.obj
+         x64\Debug\MD5Animation.obj
+         x64\Debug\MD5Model.obj
+         x64\Debug\Renderer.obj
+         x64\Debug\KeyFrameAnimationShader.obj
+         x64\Debug\main.obj
+         x64\Debug\md2model.obj
+         x64\Debug\Model.obj
+         x64\Debug\Model3D.obj
+         x64\Debug\ModelNode.obj
+         x64\Debug\ShaderProgram.obj
+         x64\Debug\shader.obj
+         x64\Debug\stb_image.obj
+         x64\Debug\texture.obj
+         x64\Debug\TexturedModel.obj
+         x64\Debug\vertexBufferObject.obj
+     1>ApplicationManager.obj : error LNK2019: unresolved external symbol __imp_glClear referenced in function "public: void __cdecl ApplicationManager::StartMainLoop(void)" (?StartMainLoop@ApplicationManager@@QEAAXXZ)
+     1>ApplicationManager.obj : error LNK2019: unresolved external symbol __imp_glClearColor referenced in function "public: void __cdecl ApplicationManager::StartMainLoop(void)" (?StartMainLoop@ApplicationManager@@QEAAXXZ)
+     1>ApplicationManager.obj : error LNK2019: unresolved external symbol __imp_glDepthFunc referenced in function "public: bool __cdecl ApplicationManager::InitalizeApplication(int,int)" (?InitalizeApplication@ApplicationManager@@QEAA_NHH@Z)
+     1>ApplicationManager.obj : error LNK2019: unresolved external symbol __imp_glEnable referenced in function "public: bool __cdecl ApplicationManager::InitalizeApplication(int,int)" (?InitalizeApplication@ApplicationManager@@QEAA_NHH@Z)
+     1>Md3.obj : error LNK2001: unresolved external symbol __imp_glEnable
+     1>ApplicationManager.obj : error LNK2019: unresolved external symbol __imp_glewInit referenced in function "public: bool __cdecl ApplicationManager::InitalizeApplication(int,int)" (?InitalizeApplication@ApplicationManager@@QEAA_NHH@Z)
+     1>ApplicationManager.obj : error LNK2019: unresolved external symbol glfwInit referenced in function "public: bool __cdecl ApplicationManager::InitalizeApplication(int,int)" (?InitalizeApplication@ApplicationManager@@QEAA_NHH@Z)
+     1>ApplicationManager.obj : error LNK2019: unresolved external symbol glfwTerminate referenced in function "public: void __cdecl ApplicationManager::CloseApplication(void)" (?CloseApplication@ApplicationManager@@QEAAXXZ)
+     1>ApplicationManager.obj : error LNK2019: unresolved external symbol glfwCreateWindow referenced in function "public: bool __cdecl ApplicationManager::InitalizeApplication(int,int)" (?InitalizeApplication@ApplicationManager@@QEAA_NHH@Z)
+     1>ApplicationManager.obj : error LNK2019: unresolved external symbol glfwDestroyWindow referenced in function "public: void __cdecl ApplicationManager::CloseApplication(void)" (?CloseApplication@ApplicationManager@@QEAAXXZ)
+     1>ApplicationManager.obj : error LNK2019: unresolved external symbol glfwWindowShouldClose referenced in function "public: void __cdecl ApplicationManager::StartMainLoop(void)" (?StartMainLoop@ApplicationManager@@QEAAXXZ)
+     1>ApplicationManager.obj : error LNK2019: unresolved external symbol glfwGetWindowSize referenced in function "public: bool __cdecl ApplicationManager::InitalizeApplication(int,int)" (?InitalizeApplication@ApplicationManager@@QEAA_NHH@Z)
+     1>ApplicationManager.obj : error LNK2019: unresolved external symbol glfwPollEvents referenced in function "public: void __cdecl ApplicationManager::StartMainLoop(void)" (?StartMainLoop@ApplicationManager@@QEAAXXZ)
+     1>ApplicationManager.obj : error LNK2019: unresolved external symbol glfwSetInputMode referenced in function "public: bool __cdecl ApplicationManager::InitalizeApplication(int,int)" (?InitalizeApplication@ApplicationManager@@QEAA_NHH@Z)
+     1>ApplicationManager.obj : error LNK2019: unresolved external symbol glfwGetKey referenced in function "public: void __cdecl ApplicationManager::StartMainLoop(void)" (?StartMainLoop@ApplicationManager@@QEAAXXZ)
+     1>ApplicationManager.obj : error LNK2019: unresolved external symbol glfwSetCursorPos referenced in function "public: bool __cdecl ApplicationManager::InitalizeApplication(int,int)" (?InitalizeApplication@ApplicationManager@@QEAA_NHH@Z)
+     1>ApplicationManager.obj : error LNK2019: unresolved external symbol glfwSetKeyCallback referenced in function "public: bool __cdecl ApplicationManager::InitalizeApplication(int,int)" (?InitalizeApplication@ApplicationManager@@QEAA_NHH@Z)
+     1>ApplicationManager.obj : error LNK2019: unresolved external symbol glfwSetMouseButtonCallback referenced in function "public: bool __cdecl ApplicationManager::InitalizeApplication(int,int)" (?InitalizeApplication@ApplicationManager@@QEAA_NHH@Z)
+     1>ApplicationManager.obj : error LNK2019: unresolved external symbol glfwSetCursorPosCallback referenced in function "public: bool __cdecl ApplicationManager::InitalizeApplication(int,int)" (?InitalizeApplication@ApplicationManager@@QEAA_NHH@Z)
+     1>ApplicationManager.obj : error LNK2019: unresolved external symbol glfwGetTime referenced in function "private: void __cdecl ApplicationManager::Update(void)" (?Update@ApplicationManager@@AEAAXXZ)
+     1>ApplicationManager.obj : error LNK2019: unresolved external symbol glfwMakeContextCurrent referenced in function "public: bool __cdecl ApplicationManager::InitalizeApplication(int,int)" (?InitalizeApplication@ApplicationManager@@QEAA_NHH@Z)
+     1>ApplicationManager.obj : error LNK2019: unresolved external symbol glfwSwapBuffers referenced in function "public: void __cdecl ApplicationManager::StartMainLoop(void)" (?StartMainLoop@ApplicationManager@@QEAAXXZ)
+     1>ApplicationManager.obj : error LNK2001: unresolved external symbol __imp_glewExperimental
+     1>Md3.obj : error LNK2019: unresolved external symbol __imp_glBegin referenced in function "private: void __cdecl CModelMD3::RenderModel(struct t3DModel *)" (?RenderModel@CModelMD3@@AEAAXPEAUt3DModel@@@Z)
+     1>MD5Animation.obj : error LNK2001: unresolved external symbol __imp_glBegin
+     1>MD5Model.obj : error LNK2001: unresolved external symbol __imp_glBegin
+     1>Md3.obj : error LNK2019: unresolved external symbol __imp_glBindTexture referenced in function "public: void __cdecl CModelMD3::TraverseModel(int,struct t3DModel *,struct glm::detail::tmat4x4<float> const &)" (?TraverseModel@CModelMD3@@QEAAXHPEAUt3DModel@@AEBU?$tmat4x4@M@detail@glm@@@Z)
+     1>MD5Model.obj : error LNK2001: unresolved external symbol __imp_glBindTexture
+     1>texture.obj : error LNK2001: unresolved external symbol __imp_glBindTexture
+     1>Md3.obj : error LNK2019: unresolved external symbol __imp_glDisable referenced in function "private: void __cdecl CModelMD3::RenderModel(struct t3DModel *)" (?RenderModel@CModelMD3@@AEAAXPEAUt3DModel@@@Z)
+     1>MD5Animation.obj : error LNK2001: unresolved external symbol __imp_glDisable
+     1>MD5Model.obj : error LNK2001: unresolved external symbol __imp_glDisable
+     1>Md3.obj : error LNK2019: unresolved external symbol __imp_glEnd referenced in function "private: void __cdecl CModelMD3::RenderModel(struct t3DModel *)" (?RenderModel@CModelMD3@@AEAAXPEAUt3DModel@@@Z)
+     1>MD5Animation.obj : error LNK2001: unresolved external symbol __imp_glEnd
+     1>MD5Model.obj : error LNK2001: unresolved external symbol __imp_glEnd
+     1>Md3.obj : error LNK2019: unresolved external symbol __imp_glMultMatrixf referenced in function "private: void __cdecl CModelMD3::DrawLink(struct t3DModel *)" (?DrawLink@CModelMD3@@AEAAXPEAUt3DModel@@@Z)
+     1>MD5Model.obj : error LNK2001: unresolved external symbol __imp_glMultMatrixf
+     1>Md3.obj : error LNK2019: unresolved external symbol __imp_glPopMatrix referenced in function "private: void __cdecl CModelMD3::DrawLink(struct t3DModel *)" (?DrawLink@CModelMD3@@AEAAXPEAUt3DModel@@@Z)
+     1>MD5Model.obj : error LNK2001: unresolved external symbol __imp_glPopMatrix
+     1>Md3.obj : error LNK2019: unresolved external symbol __imp_glPushMatrix referenced in function "private: void __cdecl CModelMD3::DrawLink(struct t3DModel *)" (?DrawLink@CModelMD3@@AEAAXPEAUt3DModel@@@Z)
+     1>MD5Model.obj : error LNK2001: unresolved external symbol __imp_glPushMatrix
+     1>Md3.obj : error LNK2019: unresolved external symbol __imp_glRotatef referenced in function "public: void __cdecl CModelMD3::DrawModel(void)" (?DrawModel@CModelMD3@@QEAAXXZ)
+     1>Md3.obj : error LNK2019: unresolved external symbol __imp_glTexCoord2f referenced in function "private: void __cdecl CModelMD3::RenderModel(struct t3DModel *)" (?RenderModel@CModelMD3@@AEAAXPEAUt3DModel@@@Z)
+     1>Md3.obj : error LNK2019: unresolved external symbol __imp_glVertex3f referenced in function "private: void __cdecl CModelMD3::RenderModel(struct t3DModel *)" (?RenderModel@CModelMD3@@AEAAXPEAUt3DModel@@@Z)
+     1>MD5Animation.obj : error LNK2019: unresolved external symbol "class boost::system::error_category const & __cdecl boost::system::system_category(void)" (?system_category@system@boost@@YAAEBVerror_category@12@XZ) referenced in function "void __cdecl boost::system::`dynamic initializer for 'native_ecat''(void)" (??__Enative_ecat@system@boost@@YAXXZ)
+     1>MD5Model.obj : error LNK2001: unresolved external symbol "class boost::system::error_category const & __cdecl boost::system::system_category(void)" (?system_category@system@boost@@YAAEBVerror_category@12@XZ)
+     1>MD5Animation.obj : error LNK2019: unresolved external symbol "class boost::system::error_category const & __cdecl boost::system::generic_category(void)" (?generic_category@system@boost@@YAAEBVerror_category@12@XZ) referenced in function "void __cdecl boost::system::`dynamic initializer for 'errno_ecat''(void)" (??__Eerrno_ecat@system@boost@@YAXXZ)
+     1>MD5Model.obj : error LNK2001: unresolved external symbol "class boost::system::error_category const & __cdecl boost::system::generic_category(void)" (?generic_category@system@boost@@YAAEBVerror_category@12@XZ)
+     1>MD5Animation.obj : error LNK2019: unresolved external symbol "void __cdecl boost::filesystem::path_traits::convert(char const *,char const *,class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > &,class std::codecvt<wchar_t,char,int> const &)" (?convert@path_traits@filesystem@boost@@YAXPEBD0AEAV?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@std@@AEBV?$codecvt@_WDH@5@@Z) referenced in function "void __cdecl boost::filesystem::path_traits::convert(char const *,char const *,class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > &)" (?convert@path_traits@filesystem@boost@@YAXPEBD0AEAV?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@std@@@Z)
+     1>MD5Model.obj : error LNK2001: unresolved external symbol "void __cdecl boost::filesystem::path_traits::convert(char const *,char const *,class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > &,class std::codecvt<wchar_t,char,int> const &)" (?convert@path_traits@filesystem@boost@@YAXPEBD0AEAV?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@std@@AEBV?$codecvt@_WDH@5@@Z)
+     1>MD5Animation.obj : error LNK2019: unresolved external symbol "public: static class std::codecvt<wchar_t,char,int> const & __cdecl boost::filesystem::path::codecvt(void)" (?codecvt@path@filesystem@boost@@SAAEBV?$codecvt@_WDH@std@@XZ) referenced in function "void __cdecl boost::filesystem::path_traits::convert(char const *,char const *,class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > &)" (?convert@path_traits@filesystem@boost@@YAXPEBD0AEAV?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@std@@@Z)
+     1>MD5Model.obj : error LNK2001: unresolved external symbol "public: static class std::codecvt<wchar_t,char,int> const & __cdecl boost::filesystem::path::codecvt(void)" (?codecvt@path@filesystem@boost@@SAAEBV?$codecvt@_WDH@std@@XZ)
+     1>MD5Animation.obj : error LNK2019: unresolved external symbol "class boost::filesystem::file_status __cdecl boost::filesystem::detail::status(class boost::filesystem::path const &,class boost::system::error_code *)" (?status@detail@filesystem@boost@@YA?AVfile_status@23@AEBVpath@23@PEAVerror_code@system@3@@Z) referenced in function "bool __cdecl boost::filesystem::exists(class boost::filesystem::path const &)" (?exists@filesystem@boost@@YA_NAEBVpath@12@@Z)
+     1>MD5Model.obj : error LNK2001: unresolved external symbol "class boost::filesystem::file_status __cdecl boost::filesystem::detail::status(class boost::filesystem::path const &,class boost::system::error_code *)" (?status@detail@filesystem@boost@@YA?AVfile_status@23@AEBVpath@23@PEAVerror_code@system@3@@Z)
+     1>MD5Animation.obj : error LNK2019: unresolved external symbol __imp_glColor3f referenced in function "public: void __cdecl MD5Animation::Render(void)" (?Render@MD5Animation@@QEAAXXZ)
+     1>MD5Model.obj : error LNK2001: unresolved external symbol __imp_glColor3f
+     1>MD5Animation.obj : error LNK2019: unresolved external symbol __imp_glPointSize referenced in function "public: void __cdecl MD5Animation::Render(void)" (?Render@MD5Animation@@QEAAXXZ)
+     1>MD5Model.obj : error LNK2001: unresolved external symbol __imp_glPointSize
+     1>MD5Animation.obj : error LNK2019: unresolved external symbol __imp_glPopAttrib referenced in function "public: void __cdecl MD5Animation::Render(void)" (?Render@MD5Animation@@QEAAXXZ)
+     1>MD5Model.obj : error LNK2001: unresolved external symbol __imp_glPopAttrib
+     1>MD5Animation.obj : error LNK2019: unresolved external symbol __imp_glPushAttrib referenced in function "public: void __cdecl MD5Animation::Render(void)" (?Render@MD5Animation@@QEAAXXZ)
+     1>MD5Model.obj : error LNK2001: unresolved external symbol __imp_glPushAttrib
+     1>MD5Animation.obj : error LNK2019: unresolved external symbol __imp_glVertex3fv referenced in function "public: void __cdecl MD5Animation::Render(void)" (?Render@MD5Animation@@QEAAXXZ)
+     1>MD5Model.obj : error LNK2001: unresolved external symbol __imp_glVertex3fv
+     1>MD5Model.obj : error LNK2019: unresolved external symbol "void __cdecl boost::filesystem::path_traits::convert(wchar_t const *,wchar_t const *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > &,class std::codecvt<wchar_t,char,int> const &)" (?convert@path_traits@filesystem@boost@@YAXPEB_W0AEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBV?$codecvt@_WDH@5@@Z) referenced in function "void __cdecl boost::filesystem::path_traits::convert(wchar_t const *,wchar_t const *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > &)" (?convert@path_traits@filesystem@boost@@YAXPEB_W0AEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+     1>MD5Model.obj : error LNK2019: unresolved external symbol "public: class boost::filesystem::path & __cdecl boost::filesystem::path::operator/=(class boost::filesystem::path const &)" (??_0path@filesystem@boost@@QEAAAEAV012@AEBV012@@Z) referenced in function "class boost::filesystem::path __cdecl boost::filesystem::operator/(class boost::filesystem::path const &,class boost::filesystem::path const &)" (??Kfilesystem@boost@@YA?AVpath@01@AEBV201@0@Z)
+     1>MD5Model.obj : error LNK2019: unresolved external symbol "public: class boost::filesystem::path & __cdecl boost::filesystem::path::replace_extension(class boost::filesystem::path const &)" (?replace_extension@path@filesystem@boost@@QEAAAEAV123@AEBV123@@Z) referenced in function "public: bool __cdecl MD5Model::LoadModel(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?LoadModel@MD5Model@@QEAA_NAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+     1>MD5Model.obj : error LNK2019: unresolved external symbol "public: class boost::filesystem::path __cdecl boost::filesystem::path::parent_path(void)const " (?parent_path@path@filesystem@boost@@QEBA?AV123@XZ) referenced in function "public: bool __cdecl MD5Model::LoadModel(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?LoadModel@MD5Model@@QEAA_NAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+     1>MD5Model.obj : error LNK2019: unresolved external symbol "public: class boost::filesystem::path __cdecl boost::filesystem::path::extension(void)const " (?extension@path@filesystem@boost@@QEBA?AV123@XZ) referenced in function "public: bool __cdecl boost::filesystem::path::has_extension(void)const " (?has_extension@path@filesystem@boost@@QEBA_NXZ)
+     1>MD5Model.obj : error LNK2019: unresolved external symbol __imp_glDisableClientState referenced in function "protected: void __cdecl MD5Model::RenderMesh(struct MD5Model::Mesh const &)" (?RenderMesh@MD5Model@@IEAAXAEBUMesh@1@@Z)
+     1>MD5Model.obj : error LNK2019: unresolved external symbol __imp_glDrawElements referenced in function "protected: void __cdecl MD5Model::RenderMesh(struct MD5Model::Mesh const &)" (?RenderMesh@MD5Model@@IEAAXAEBUMesh@1@@Z)
+     1>Model.obj : error LNK2001: unresolved external symbol __imp_glDrawElements
+     1>MD5Model.obj : error LNK2019: unresolved external symbol __imp_glEnableClientState referenced in function "protected: void __cdecl MD5Model::RenderMesh(struct MD5Model::Mesh const &)" (?RenderMesh@MD5Model@@IEAAXAEBUMesh@1@@Z)
+     1>MD5Model.obj : error LNK2019: unresolved external symbol __imp_glNormalPointer referenced in function "protected: void __cdecl MD5Model::RenderMesh(struct MD5Model::Mesh const &)" (?RenderMesh@MD5Model@@IEAAXAEBUMesh@1@@Z)
+     1>MD5Model.obj : error LNK2019: unresolved external symbol __imp_glTexCoordPointer referenced in function "protected: void __cdecl MD5Model::RenderMesh(struct MD5Model::Mesh const &)" (?RenderMesh@MD5Model@@IEAAXAEBUMesh@1@@Z)
+     1>MD5Model.obj : error LNK2019: unresolved external symbol __imp_glVertexPointer referenced in function "protected: void __cdecl MD5Model::RenderMesh(struct MD5Model::Mesh const &)" (?RenderMesh@MD5Model@@IEAAXAEBUMesh@1@@Z)
+     1>Renderer.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) class irrklang::ISoundEngine * __cdecl irrklang::createIrrKlangDevice(enum irrklang::E_SOUND_OUTPUT_DRIVER,int,char const *,char const *)" (__imp_?createIrrKlangDevice@irrklang@@YAPEAVISoundEngine@1@W4E_SOUND_OUTPUT_DRIVER@1@HPEBD1@Z) referenced in function "public: void __cdecl Renderer::Initialize(void)" (?Initialize@Renderer@@QEAAXXZ)
+     1>Renderer.obj : error LNK2001: unresolved external symbol __imp___glewDeleteProgram
+     1>ShaderProgram.obj : error LNK2001: unresolved external symbol __imp___glewDeleteProgram
+     1>Renderer.obj : error LNK2001: unresolved external symbol __imp___glewGetUniformLocation
+     1>KeyFrameAnimationShader.obj : error LNK2001: unresolved external symbol __imp___glewGetUniformLocation
+     1>ModelNode.obj : error LNK2001: unresolved external symbol __imp___glewGetUniformLocation
+     1>ShaderProgram.obj : error LNK2001: unresolved external symbol __imp___glewGetUniformLocation
+     1>Renderer.obj : error LNK2001: unresolved external symbol __imp___glewUniformMatrix4fv
+     1>ModelNode.obj : error LNK2001: unresolved external symbol __imp___glewUniformMatrix4fv
+     1>ShaderProgram.obj : error LNK2001: unresolved external symbol __imp___glewUniformMatrix4fv
+     1>Renderer.obj : error LNK2001: unresolved external symbol __imp___glewUseProgram
+     1>ShaderProgram.obj : error LNK2001: unresolved external symbol __imp___glewUseProgram
+     1>KeyFrameAnimationShader.obj : error LNK2001: unresolved external symbol __imp___glewUniform1f
+     1>md2model.obj : error LNK2019: unresolved external symbol __imp_glDrawArrays referenced in function "public: void __cdecl CMD2Model::RenderModel(struct animState_t *,class KeyFrameAnimationShader *)" (?RenderModel@CMD2Model@@QEAAXPEAUanimState_t@@PEAVKeyFrameAnimationShader@@@Z)
+     1>Model.obj : error LNK2001: unresolved external symbol __imp_glDrawArrays
+     1>md2model.obj : error LNK2001: unresolved external symbol __imp___glewEnableVertexAttribArray
+     1>Model.obj : error LNK2001: unresolved external symbol __imp___glewEnableVertexAttribArray
+     1>md2model.obj : error LNK2001: unresolved external symbol __imp___glewVertexAttribPointer
+     1>Model.obj : error LNK2001: unresolved external symbol __imp___glewVertexAttribPointer
+     1>md2model.obj : error LNK2001: unresolved external symbol __imp___glewBindVertexArray
+     1>Model.obj : error LNK2001: unresolved external symbol __imp___glewBindVertexArray
+     1>md2model.obj : error LNK2001: unresolved external symbol __imp___glewGenVertexArrays
+     1>Model.obj : error LNK2001: unresolved external symbol __imp___glewGenVertexArrays
+     1>Model.obj : error LNK2019: unresolved external symbol __imp_glPolygonMode referenced in function "public: virtual void __cdecl Model::DrawWireFrame(void)" (?DrawWireFrame@Model@@UEAAXXZ)
+     1>Model.obj : error LNK2001: unresolved external symbol __imp___glewBindBuffer
+     1>vertexBufferObject.obj : error LNK2001: unresolved external symbol __imp___glewBindBuffer
+     1>Model.obj : error LNK2001: unresolved external symbol __imp___glewBufferData
+     1>vertexBufferObject.obj : error LNK2001: unresolved external symbol __imp___glewBufferData
+     1>Model.obj : error LNK2001: unresolved external symbol __imp___glewDeleteBuffers
+     1>vertexBufferObject.obj : error LNK2001: unresolved external symbol __imp___glewDeleteBuffers
+     1>Model.obj : error LNK2001: unresolved external symbol __imp___glewGenBuffers
+     1>vertexBufferObject.obj : error LNK2001: unresolved external symbol __imp___glewGenBuffers
+     1>Model.obj : error LNK2001: unresolved external symbol __imp___glewDeleteVertexArrays
+     1>Model3D.obj : error LNK2019: unresolved external symbol "public: __cdecl Assimp::Importer::Importer(void)" (??0Importer@Assimp@@QEAA@XZ) referenced in function "public: bool __cdecl Model3D::LoadFromFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,bool)" (?LoadFromFile@Model3D@@QEAA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_N@Z)
+     1>Model3D.obj : error LNK2019: unresolved external symbol "public: __cdecl Assimp::Importer::~Importer(void)" (??1Importer@Assimp@@QEAA@XZ) referenced in function "public: bool __cdecl Model3D::LoadFromFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,bool)" (?LoadFromFile@Model3D@@QEAA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_N@Z)
+     1>Model3D.obj : error LNK2019: unresolved external symbol "public: struct aiScene const * __cdecl Assimp::Importer::ReadFile(char const *,unsigned int)" (?ReadFile@Importer@Assimp@@QEAAPEBUaiScene@@PEBDI@Z) referenced in function "public: bool __cdecl Model3D::LoadFromFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,bool)" (?LoadFromFile@Model3D@@QEAA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_N@Z)
+     1>Model3D.obj : error LNK2019: unresolved external symbol "public: char const * __cdecl Assimp::Importer::GetErrorString(void)const " (?GetErrorString@Importer@Assimp@@QEBAPEBDXZ) referenced in function "public: bool __cdecl Model3D::LoadFromFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,bool)" (?LoadFromFile@Model3D@@QEAA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_N@Z)
+     1>Model3D.obj : error LNK2019: unresolved external symbol aiGetMaterialTexture referenced in function "public: enum aiReturn __cdecl aiMaterial::GetTexture(enum aiTextureType,unsigned int,struct aiString *,enum aiTextureMapping *,unsigned int *,float *,enum aiTextureOp *,enum aiTextureMapMode *)const " (?GetTexture@aiMaterial@@QEBA?AW4aiReturn@@W4aiTextureType@@IPEAUaiString@@PEAW4aiTextureMapping@@PEAIPEAMPEAW4aiTextureOp@@PEAW4aiTextureMapMode@@@Z)
+     1>ShaderProgram.obj : error LNK2001: unresolved external symbol __imp___glewUniform4fv
+     1>shader.obj : error LNK2001: unresolved external symbol __imp___glewAttachShader
+     1>shader.obj : error LNK2001: unresolved external symbol __imp___glewCompileShader
+     1>shader.obj : error LNK2001: unresolved external symbol __imp___glewCreateProgram
+     1>shader.obj : error LNK2001: unresolved external symbol __imp___glewCreateShader
+     1>shader.obj : error LNK2001: unresolved external symbol __imp___glewDeleteShader
+     1>shader.obj : error LNK2001: unresolved external symbol __imp___glewGetProgramInfoLog
+     1>shader.obj : error LNK2001: unresolved external symbol __imp___glewGetProgramiv
+     1>shader.obj : error LNK2001: unresolved external symbol __imp___glewGetShaderInfoLog
+     1>shader.obj : error LNK2001: unresolved external symbol __imp___glewGetShaderiv
+     1>shader.obj : error LNK2001: unresolved external symbol __imp___glewLinkProgram
+     1>shader.obj : error LNK2001: unresolved external symbol __imp___glewShaderSource
+     1>texture.obj : error LNK2019: unresolved external symbol __imp_glDeleteTextures referenced in function "public: virtual __cdecl Texture::~Texture(void)" (??1Texture@@UEAA@XZ)
+     1>texture.obj : error LNK2019: unresolved external symbol __imp_glGenTextures referenced in function "unsigned int __cdecl loadDDS(char const *)" (?loadDDS@@YAIPEBD@Z)
+     1>texture.obj : error LNK2019: unresolved external symbol __imp_glPixelStorei referenced in function "unsigned int __cdecl loadDDS(char const *)" (?loadDDS@@YAIPEBD@Z)
+     1>texture.obj : error LNK2019: unresolved external symbol __imp_glTexImage2D referenced in function "public: __cdecl Texture::Texture(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const * const,int)" (??0Texture@@QEAA@QEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@H@Z)
+     1>texture.obj : error LNK2019: unresolved external symbol __imp_glTexParameterf referenced in function "public: __cdecl Texture::Texture(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,int)" (??0Texture@@QEAA@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@H@Z)
+     1>texture.obj : error LNK2019: unresolved external symbol __imp_glTexParameteri referenced in function "public: __cdecl Texture::Texture(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const * const,int)" (??0Texture@@QEAA@QEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@H@Z)
+     1>texture.obj : error LNK2019: unresolved external symbol __imp_FreeImage_Unload referenced in function "public: __cdecl Texture::Texture(char const *,int,int)" (??0Texture@@QEAA@PEBDHH@Z)
+     1>texture.obj : error LNK2019: unresolved external symbol __imp_FreeImage_Load referenced in function "public: __cdecl Texture::Texture(char const *,int,int)" (??0Texture@@QEAA@PEBDHH@Z)
+     1>texture.obj : error LNK2019: unresolved external symbol __imp_FreeImage_GetFileType referenced in function "public: __cdecl Texture::Texture(char const *,int,int)" (??0Texture@@QEAA@PEBDHH@Z)
+     1>texture.obj : error LNK2019: unresolved external symbol __imp_FreeImage_GetBits referenced in function "public: __cdecl Texture::Texture(char const *,int,int)" (??0Texture@@QEAA@PEBDHH@Z)
+     1>texture.obj : error LNK2019: unresolved external symbol __imp_FreeImage_GetWidth referenced in function "public: __cdecl Texture::Texture(char const *,int,int)" (??0Texture@@QEAA@PEBDHH@Z)
+     1>texture.obj : error LNK2019: unresolved external symbol __imp_FreeImage_GetHeight referenced in function "public: __cdecl Texture::Texture(char const *,int,int)" (??0Texture@@QEAA@PEBDHH@Z)
+     1>texture.obj : error LNK2019: unresolved external symbol __imp_FreeImage_ConvertTo32Bits referenced in function "public: __cdecl Texture::Texture(char const *,int,int)" (??0Texture@@QEAA@PEBDHH@Z)
+     1>texture.obj : error LNK2001: unresolved external symbol __imp___glewActiveTexture
+     1>texture.obj : error LNK2001: unresolved external symbol __imp___glewCompressedTexImage2D
+     1>vertexBufferObject.obj : error LNK2001: unresolved external symbol __imp___glewMapBuffer
+     1>vertexBufferObject.obj : error LNK2001: unresolved external symbol __imp___glewUnmapBuffer
+     1>vertexBufferObject.obj : error LNK2001: unresolved external symbol __imp___glewMapBufferRange
+     1>F:\Projects\Aircraft\x64\Debug\Graphics L1.exe : fatal error LNK1120: 105 unresolved externals
+     1>Done Building Project "F:\Projects\Aircraft\Graphics L1\Graphics L1.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.40

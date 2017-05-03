@@ -4,6 +4,32 @@
 #include "../middleware/includes/glm/gtc/matrix_transform.hpp"
 
 #include "Renderer.h"
+
+//sound
+#include "data/irrKlang-1.5.0/include/irrKlang.h"
+#include "data/irrKlang-1.5.0/include/ik_ISound.h"
+#include "data/irrKlang-1.5.0/include/ik_ISoundEngine.h"
+#include "data/irrKlang-1.5.0/include/ik_ISoundSource.h"
+#include "data/irrKlang-1.5.0/include/ik_ESoundEngineOptions.h"
+#include "data/irrKlang-1.5.0/include/ik_ESoundOutputDrivers.h"
+#include "data/irrKlang-1.5.0/include/ik_EStreamModes.h"
+#include "data/irrKlang-1.5.0/include/ik_IAudioRecorder.h"
+#include "data/irrKlang-1.5.0/include/ik_IAudioStream.h"
+#include "data/irrKlang-1.5.0/include/ik_IAudioStreamLoader.h"
+#include "data/irrKlang-1.5.0/include/ik_IFileFactory.h"
+#include "data/irrKlang-1.5.0/include/ik_IFileReader.h"
+#include "data/irrKlang-1.5.0/include/ik_IRefCounted.h"
+#include "data/irrKlang-1.5.0/include/ik_irrKlangTypes.h"
+#include "data/irrKlang-1.5.0/include/ik_ISoundDeviceList.h"
+#include "data/irrKlang-1.5.0/include/ik_ISoundEffectControl.h"
+#include "data/irrKlang-1.5.0/include/ik_ISoundMixedOutputReceiver.h"
+#include "data/irrKlang-1.5.0/include/ik_ISoundStopEventReceiver.h"
+#include "data/irrKlang-1.5.0/include/ik_IVirtualRefCounted.h"
+#include "data/irrKlang-1.5.0/include/ik_SAudioStreamFormat.h"
+#include "data/irrKlang-1.5.0/include/ik_vec3d.h"
+#pragma comment(lib, "irrKlang.lib") // link with irrKlang.dll
+using namespace irrklang;
+////----------------------------------------------------------------------------
 #include "Application Manager\ApplicationManager.h"
 float xr = 3.02, yr = 3.02, zr = 3.02;   //intial points to move the aircraft
 Renderer::Renderer()
@@ -16,11 +42,11 @@ Renderer::~Renderer()
 	Cleanup();
 }
 
-	void Renderer::Initialize()
-	{
 
+irrklang::ISoundEngine* engine = irrklang::createIrrKlangDevice();
+void Renderer::Initialize()
+{	
 
-		
 		//since the triangle is not connected to anything else, so the normal is constant on all the vertices.
 		//drawing a square.
 		size_of_skybox = 10;
@@ -161,28 +187,34 @@ void Renderer::HandleKeyboardInput(int key, int action)
 		//Aircraft Movements	
 		case GLFW_KEY_W:
 		model3D->Render(&shader1, glm::rotate(0.0f, glm::vec3(0, 1, 0))*glm::scale(glm::vec3(2.02f, 2.02f, 2.02f))*glm::translate(glm::vec3(xr, yr, zr++))); 	 // movement directions 
+		engine->play2D("data/media/move.wav");
 		break;																																				 	 // movement directions
 																																							 	 // movement directions
 		case GLFW_KEY_S:																																	 	 // movement directions
 		model3D->Render(&shader1, glm::rotate(0.0f, glm::vec3(0, 1, 0))*glm::scale(glm::vec3(2.02f, 2.02f, 2.02f))*glm::translate(glm::vec3(xr, yr, zr--))); 	 // movement directions
+		engine->play2D("data/media/move.wav");
 		break;																																				 	 // movement directions
 																																							 	 // movement directions
 		case GLFW_KEY_D:																																	 	 // movement directions
 		model3D->Render(&shader1, glm::rotate(0.0f, glm::vec3(0, 1, 0))*glm::scale(glm::vec3(2.02f, 2.02f, 2.02f))*glm::translate(glm::vec3(xr++, yr, zr))); 	 // movement directions
+		engine->play2D("data/media/move.wav");
 		break;																																				 	 // movement directions
 																																							 	 // movement directions
 		case GLFW_KEY_A:																																	 	 // movement directions
 		model3D->Render(&shader1, glm::rotate(0.0f, glm::vec3(0, 1, 0))*glm::scale(glm::vec3(2.02f, 2.02f, 2.02f))*glm::translate(glm::vec3(xr--, yr, zr))); 	 // movement directions
+		engine->play2D("data/media/move.wav");
 		break;																																				 	 // movement directions
 																																							 	 // movement directions
 		case GLFW_KEY_X:																																	 	 // movement directions
 		model3D->Render(&shader1, glm::rotate(0.0f, glm::vec3(0, 1, 0))*glm::scale(glm::vec3(2.02f, 2.02f, 2.02f))*glm::translate(glm::vec3(xr, yr++, zr))); 	 // movement directions
+		engine->play2D("data/media/takeoff.wav");
 		break;																																				 	 // movement directions
 																																							 	 // movement directions
 		case GLFW_KEY_Z:
 		if (yr > -5.0)
 		{
 			model3D->Render(&shader1, glm::rotate(0.0f, glm::vec3(0, 1, 0))*glm::scale(glm::vec3(2.02f, 2.02f, 2.02f))*glm::translate(glm::vec3(xr, yr--, zr)));   // movement directions
+			engine->play2D("data/media/land.wav");
 		}
 		break;
 
